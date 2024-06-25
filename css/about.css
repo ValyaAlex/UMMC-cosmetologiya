@@ -1,0 +1,7 @@
+.about {
+    padding-top: 100px;
+}
+
+.about__text:last-child {
+    margin-bottom: 60px;
+}
