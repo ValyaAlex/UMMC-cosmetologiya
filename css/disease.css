@@ -105,7 +105,7 @@
     padding: 90px 35px 90px 60px;
     height: 450px;
     max-width: 800px;
-    top: 5%;
+    top: 0;
     border: 1px solid var(--white);
     background-color: var(--white);
     position: absolute;
@@ -145,8 +145,8 @@
 }
 
 .modal-overlay__text {
-    max-width: 90%;  
-    font-size: 16px;   
+    max-width: 90%;
+    font-size: 16px;
 }
 
 .modal__more {
@@ -174,7 +174,7 @@
 }
 
 .disease__page-text {
-    margin-bottom: 20px;      
+    margin-bottom: 20px;
 }
 
 .disease__page-text__link {
@@ -191,8 +191,8 @@
 }
 
 .page__list .list__item::before {
-content: "一";
-margin-right: 10px;
+    content: "一";
+    margin-right: 10px;
 }
 
 .page-container .title {
@@ -202,6 +202,11 @@ margin-right: 10px;
 
 .page__block {
     margin-bottom: 70px;
+}
+
+.page__links {
+    display: flex;
+    gap: 30px;
 }
 
 .page__link {
