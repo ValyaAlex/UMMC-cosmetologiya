@@ -14,15 +14,18 @@
     width: 100%;
 }
 
-.consultation__stage:not(:last-of-type)::before {
+.stage-progress::before {
     content: '';
     display: block;
     position: absolute;
-    top: 46px;
-    left: 51.9%;
+    top: 0;
+    left: 50%;
     bottom: 0;
     width: .5px;
     background: #E2E7EC;
+    z-index: -1;
+    height: 180px;
+    transition: none;
 }
 
 .consultation__stage:last-of-type {
@@ -86,15 +89,16 @@
 
 .consultation__stage-text {
     position: absolute;
-    max-width: 30%;
+    max-width: 38%;
 }
 
 .consultation__stage-right {
-    right: 12%;
+    right: 4%;
 }
 
 .consultation__stage-left {
-    left: 20%;
+    left: 8%;
+    text-align: right;
 }
 
 .consultation__stages {

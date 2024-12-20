@@ -102,11 +102,6 @@ body {
   list-style: none
 }
 
-.list-reset li {
-  line-height: 1.8em;
-  margin-bottom: 10px;
-}
-
 .btn-reset {
   padding: 0;
   border: none;

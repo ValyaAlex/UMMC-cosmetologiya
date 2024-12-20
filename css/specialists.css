@@ -203,7 +203,8 @@
 
 .modal-specialist__name {
     font-size: 30px;
-    margin-bottom: 40px
+    margin-bottom: 40px;
+    line-height: 40px;
 }
 
 .modal-specialist__profession {
@@ -304,18 +305,15 @@
     transition: color .2s
 }
 
+.checkbox {
+    display: none;
+}
+
 .modal-specialist__training .modal-specialist__training-btn .loaded {
     display: none;
 }
 
-.modal-specialist__training #see__more-training-1,
-.modal-specialist__training #see__more-training-1:checked~.modal-specialist__training-btn .unloaded,
-.modal-specialist__training #see__more-training-2,
-.modal-specialist__training #see__more-training-2:checked~.modal-specialist__training-btn .unloaded,
-.modal-specialist__training #see__more-training-3,
-.modal-specialist__training #see__more-training-3:checked~.modal-specialist__training-btn .unloaded,
-.modal-specialist__training #see__more-training-4,
-.modal-specialist__training #see__more-training-4:checked~.modal-specialist__training-btn .unloaded {
+.modal-specialist__training > [id*="see__more-training"]:checked~.modal-specialist__training-btn .unloaded {
     display: none
 }
 
@@ -323,10 +321,7 @@
     position: relative
 }
 
-.modal-specialist__training #see__more-training-1~ul li:nth-child(3)::after,
-.modal-specialist__training #see__more-training-2~ul li:nth-child(3)::after,
-.modal-specialist__training #see__more-training-3~ul li:nth-child(3)::after,
-.modal-specialist__training #see__more-training-4~ul li:nth-child(3)::after {
+.modal-specialist__training > [id*="see__more-training"] ~ ul li:nth-child(3)::after {
     content: '';
     display: block;
     position: absolute;
@@ -337,18 +332,12 @@
     background: linear-gradient(to top, #fff, #fff0)
 }
 
-.modal-specialist__training #see__more-training-1:checked~ul li:nth-child(3)::after,
-.modal-specialist__training #see__more-training-2:checked~ul li:nth-child(3)::after,
-.modal-specialist__training #see__more-training-3:checked~ul li:nth-child(3)::after,
-.modal-specialist__training #see__more-training-4:checked~ul li:nth-child(3)::after {
+.modal-specialist__training > [id*="see__more-training"]:checked ~ ul li:nth-child(3)::after {
     content: '';
     background: 0 0
 }
 
-.modal-specialist__training #see__more-training-1:checked~ul li:nth-child(1n+4),
-.modal-specialist__training #see__more-training-2:checked~ul li:nth-child(1n+4),
-.modal-specialist__training #see__more-training-3:checked~ul li:nth-child(1n+4),
-.modal-specialist__training #see__more-training-4:checked~ul li:nth-child(1n+4) {
+.modal-specialist__training > [id*="see__more-training"]:checked ~ ul li:nth-child(1n + 4) {
     max-height: 999px;
     opacity: 1;
     display: block;
@@ -357,9 +346,10 @@
     transition: .5s ease-in
 }
 
-.modal-specialist__training #see__more-training-1:checked~.modal-specialist__training-btn .loaded,
-.modal-specialist__training #see__more-training-2:checked~.modal-specialist__training-btn .loaded,
-.modal-specialist__training #see__more-training-3:checked~.modal-specialist__training-btn .loaded,
-.modal-specialist__training #see__more-training-4:checked~.modal-specialist__training-btn .loaded {
+.modal-specialist__training > [id*="see__more-training"]:checked~.modal-specialist__training-btn .loaded {
     display: block
+}
+
+.modal-specialist__specialization-item:not(:last-child) {
+    margin-bottom: 10px;
 }

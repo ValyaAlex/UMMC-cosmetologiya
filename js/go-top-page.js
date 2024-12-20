@@ -1,12 +1,12 @@
 const goTopBtn = document.querySelector(".go-top");
-let headerBtn = document.querySelector('.header__btn');
 
 window.addEventListener("scroll", trackScroll);
 goTopBtn.addEventListener("click", goTop);
 
 function trackScroll() {
   const scrolled = window.scrollY;
-  const coords = document.documentElement.clientHeight;
+  const block = document.querySelector('.category__list')
+  const coords = block.offsetHeight + 200;
   if (scrolled > coords) {
     goTopBtn.classList.add("go-top--show");
   } else {
