@@ -552,8 +552,9 @@
   }
 
   .photo__item {
+    width: 47%;
     height: 300px;
-  }
+}
 
   .item-text {
     height: 200px;
@@ -565,6 +566,11 @@
     height: 40px;
     background-size: 40px;
   }
+
+  .item-text {
+    padding: 30px;
+  }
+
 }
 
 @media (max-width: 500px) {
