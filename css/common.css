@@ -109,7 +109,8 @@ body {
   height: fit-content
 }
 
-.stop-scroll {
+.stop-scroll,
+.stop-scroll-modal {
   overflow: hidden
 }
 
@@ -120,7 +121,7 @@ body {
   width: 100%;
   height: 100%;
   z-index: 0;
-  background-color: #707c8f;
+  background-color: rgb(112, 124, 143, 0.5);
   opacity: 0;
   visibility: hidden;
   transition: .3s
@@ -130,35 +131,4 @@ body {
   visibility: visible;
   opacity: .8;
   z-index: 5
-}
-
-.go-top {
-  position: fixed;
-  left: 25px;
-  top: 115px;
-  opacity: 0;
-  height: 14px;
-  width: 17px;
-  border: 1px solid var(--border);
-  border-radius: 6px;
-  -webkit-transform: rotate(180deg);
-  -ms-transform: rotate(180deg);
-  transform: rotate(180deg);
-  background-image: url(../icon/chevron_orange.svg);
-  background-repeat: no-repeat;
-  background-position: center center;
-  padding: 20px;
-  background-color: var(--white);
-  z-index: 2;
-  -webkit-transition: border-color .3s, opacity .3s;
-  -o-transition: border-color .3s, opacity .3s;
-  transition: border-color .3s, opacity .3s
-}
-
-.go-top:hover {
-  border-color: var(--orange)
-}
-
-.go-top--show {
-  opacity: 1;
 }

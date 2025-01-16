@@ -149,6 +149,7 @@
 
   .specialists__card {
     flex-basis: calc(50% - 10px);
+    background-size: 45%;
   }
 
   .specialists__container {
@@ -208,6 +209,7 @@
   .specialists__card {
     flex-basis: 100%;
     min-height: 350px;
+    background-size: 25%;
   }
 
   .specialists__name {
@@ -270,26 +272,11 @@
     width: 30%;
   }
 
-  .table-prices tr {
-    margin: 0 -15px;
-    padding: 0 15px;
-  }
-
   .modal {
     max-width: 80%;
   }
 
-  .modal-specialist__banner {
-    padding: 100px 50px 70px 50px;
-  }
 
-  .modal-specialist__content {
-    padding: 70px 50px;
-  }
-
-  .modal-specialist__name {
-    max-width: 75%;
-  }
 }
 
 @media (max-width: 800px) {
@@ -366,12 +353,8 @@
     width: 100%;
   }
 
-  .modal-specialist__banner {
-    padding: 60px 50px;
-  }
-
-  .modal-specialist__banner {
-    background-size: 160px 200px;
+  .specialists__card {
+    background-size: 30%;
   }
 }
 
@@ -433,7 +416,7 @@
   }
 
   .specialists__card {
-    background-size: 200px 250px;
+    background-size: 35%;
   }
 
   .ac .ac-trigger {
@@ -453,25 +436,8 @@
     padding-bottom: 0px;
   }
 
-  .modal-specialist .specialist-1,
-  .modal-specialist .specialist-2,
-  .modal-specialist .specialist-3,
-  .modal-specialist .specialist-4,
-  .modal-specialist .specialist-5 {
-    background-image: none;
-  }
-
-  .modal-specialist__banner {
-    padding: 50px 70px 30px 50px;
-  }
-
   .photo {
     padding-top: 30px;
-  }
-
-  .page__list .list__item {
-    padding: 0px;
-    margin-bottom: 0;
   }
 
   .modal {
@@ -497,10 +463,6 @@
   .problems__img {
     width: 60px;
     height: 60px;
-  }
-
-  .category__btn {
-    width: 40%;
   }
 }
 
@@ -552,6 +514,7 @@
   }
 
   .photo__item {
+    width: 47%;
     height: 300px;
   }
 
@@ -564,6 +527,10 @@
     width: 40px;
     height: 40px;
     background-size: 40px;
+  }
+
+  .item-text {
+    padding: 30px;
   }
 }
 
@@ -580,13 +547,9 @@
     height: 230px;
   }
 
-  .modal-specialist__content {
-    padding: 30px 30px 30px 60px;
-  }
 
-  .price-page__title,
-  .disease__page-title {
-    font-size: 28px;
+  .specialists__card {
+    background-size: 45%;
   }
 }
 
@@ -597,10 +560,6 @@
 
   .hero__text {
     font-size: 16px;
-  }
-
-  .stage-order {
-    left: 45%;
   }
 
   .disease__item {
@@ -619,35 +578,13 @@
     padding: 10px;
   }
 
-  .disease__page-title {
-    word-break: break-all;
-  }
-
   .modal {
     padding: 50px 35px;
   }
 
-  .modal__btn-close,
-  .modal-specialist__btn-close {
+  .modal__btn-close {
     top: 30px;
     right: 30px;
-  }
-
-  .modal-specialist__banner {
-    padding: 50px 50px 30px 25px;
-  }
-
-  .modal-specialist__content {
-    padding: 20px;
-  }
-
-  .modal-specialist__name {
-    font-size: 25px;
-    line-height: 32px;
-  }
-
-  .modal-specialist__banner-title {
-    font-size: 20px;
   }
 
   .consultation__stage {
@@ -671,5 +608,14 @@
 
   .consultation__stage-left {
     text-align: left;
+  }
+
+  .specialists__card::before {
+    width: 320px;
+    height: 320px;
+  }
+
+  .specialists__card {
+    background-size: 50%;
   }
 }
