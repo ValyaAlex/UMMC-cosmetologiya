@@ -13,7 +13,7 @@ btn.forEach((el) => {
 
     document.querySelector(`[data-target="${path}"]`).classList.add('modal--visible');
     modalOverlay.classList.toggle('modal-overlay--visible');
-    document.body.classList.toggle('stop-scroll');
+    document.body.classList.toggle('stop-scroll-modal');
   });
 });
 
@@ -22,7 +22,7 @@ modalOverlay.addEventListener('click', (e) => {
     modalOverlay.classList.remove('modal-overlay--visible');
     modals.forEach((el) => {
       el.classList.remove('modal--visible');
-      document.body.classList.remove('stop-scroll');
+      document.body.classList.remove('stop-scroll-modal');
     });
   };
 });
@@ -34,48 +34,7 @@ closed.forEach(function (el) {
 
     modals.forEach((elem) => {
       elem.classList.remove('modal--visible');
-      document.body.classList.remove('stop-scroll');
-    });
-  });
-})
-
-
-const specialistCard = document.querySelectorAll('.specialists__info');
-const modalOverlaySpecialist = document.querySelector('.modal-overlay-specialist');
-const modalsSpecialist = document.querySelectorAll('.modal-specialist');
-const closedSpecialist = document.querySelectorAll('.modal-specialist__close-img');
-
-specialistCard.forEach((el) => {
-  el.addEventListener('click', (e) => {
-    let path = e.currentTarget.getAttribute('data-path');
-
-    modalsSpecialist.forEach((el) => {
-      el.classList.remove('modal--visible');
-    });
-
-    document.querySelector(`[data-target="${path}"]`).classList.add('modal--visible');
-    modalOverlaySpecialist.classList.toggle('modal-overlay--visible');
-    document.body.classList.toggle('stop-scroll');
-    modalOverlaySpecialist.scrollTop = 0;
-  });
-});
-
-modalOverlaySpecialist.addEventListener('click', (e) => {
-  if (e.target == modalOverlaySpecialist) {
-    modalOverlaySpecialist.classList.remove('modal-overlay--visible');
-    modalsSpecialist.forEach((el) => {
-      el.classList.remove('modal--visible');
-      document.body.classList.remove('stop-scroll');
-    });
-  };
-});
-
-closedSpecialist.forEach(function (el) {
-  el.addEventListener('click', function () {
-    modalOverlaySpecialist.classList.remove('modal-overlay--visible');
-    modalsSpecialist.forEach((elem) => {
-      elem.classList.remove('modal--visible');
-      document.body.classList.remove('stop-scroll');
+      document.body.classList.remove('stop-scroll-modal');
     });
   });
 })
